@@ -1,14 +1,18 @@
 ﻿#include "voice_tracker.h"
 #include <fstream>
-#include <nlohmann/json.hpp>  // JSON 라이브러리 필요
+#include <DPP/nlohmann/json.hpp>  // JSON 라이브러리 필요
 
-const dpp::snowflake VOICE_LOG_CHANNEL_ID = 1302836292836524085;
+const dpp::snowflake VOICE_LOG_CHANNEL_ID = 1303203144377040917;
 
 VoiceTracker::VoiceTracker(dpp::cluster& bot) : bot(bot)
 {
 	loadUserData();
 }
 
+VoiceTracker::~VoiceTracker()
+{
+    saveUserData();
+}
 void VoiceTracker::handle_voice_state_update(const dpp::voice_state_update_t& event) {
     dpp::snowflake user_id = event.state.user_id;
 
