@@ -1,11 +1,14 @@
 ﻿#pragma once
-// voice_tracker.h
 #ifndef VOICE_TRACKER_H
 #define VOICE_TRACKER_H
-
+#include <vector>
+#include <algorithm>
+#include <iostream>
 #include <dpp/dpp.h>
 #include <unordered_map>
 #include <chrono>
+#include <fstream>
+#include <DPP/nlohmann/json.hpp>  // JSON 라이브러리 필요
 
 class VoiceTracker {
 public:
