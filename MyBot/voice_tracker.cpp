@@ -96,8 +96,8 @@ void VoiceTracker::handleTopUsersCommand(const dpp::slashcommand_t& event) {
 void VoiceTracker::getUserUptime(const dpp::slashcommand_t& event, dpp::snowflake user_id) {
     bot.log(dpp::ll_info, "getUserUptime 호출됨. 입력된 user_id: " + std::to_string(user_id));
 
-	if (user_id == 0) {
-        event.reply("잘못된 사용자 ID입니다. 다시 시도해 주세요.");
+    if (user_id == 0) {
+        event.reply("올바른 사용자 ID가 아닙니다. 다시 시도해주세요.");
         return;
     }
 
@@ -111,6 +111,7 @@ void VoiceTracker::getUserUptime(const dpp::slashcommand_t& event, dpp::snowflak
         event.reply("<@" + std::to_string(user_id) + ">님의 업타임 기록이 없습니다.");
     }
 }
+
 
 void VoiceTracker::clearUserData() { //유저 데이터 초기화 메소드
     userTotalTimes.clear();
