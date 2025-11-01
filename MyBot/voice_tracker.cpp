@@ -1,5 +1,5 @@
 ﻿#include "voice_tracker.h"
-const dpp::snowflake VOICE_LOG_CHANNEL_ID = 1303441956520722553;
+const dpp::snowflake VOICE_LOG_CHANNEL_ID = ;
 
 VoiceTracker::VoiceTracker(dpp::cluster& bot) : bot(bot)
 {
