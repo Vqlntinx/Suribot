@@ -300,4 +300,7 @@
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="user_data.example.json" />
+  </ItemGroup>
 </Project>

@@ -280,6 +280,9 @@
     <ClInclude Include="MyBot.h" />
     <ClInclude Include="voice_tracker.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="user_data.example.json" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

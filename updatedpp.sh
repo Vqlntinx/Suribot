@@ -73,9 +73,5 @@ find . -name '*.cmake' -exec dos2unix -q {} \;
 echo "Cleaning up..."
 rm -rf temp
 
-echo "Committing..."
-git checkout main
-git pull
-git add -A MyBot/dependencies
-git commit -m "auto update to latest DPP master branch"
-git push
+echo "DPP files updated under MyBot/dependencies."
+echo "Review the dependency changes, then commit them manually if they are correct."
